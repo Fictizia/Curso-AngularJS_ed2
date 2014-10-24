@@ -19,4 +19,4 @@ Course practice
 Links
 =================
 * [AngularJS](https://angularjs.org/).
-* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [AngularJS Developer Guide](https://docs.angularjs.org/guide).
