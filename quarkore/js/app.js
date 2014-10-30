@@ -1,1 +1,3 @@
-console.log('prueba');
+'use strict';
+
+angular.module('trippin', []);

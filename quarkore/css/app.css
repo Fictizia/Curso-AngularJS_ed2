@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script:400,700);
+#navigationBar ul li a{
+    font-family: 'Amaranth', sans-serif;
+    font-weight:700;
+    font-style:italic;
+    color:black;
+}
+#navigationBar{
+    background:#D4B48B;
+    color:black;
+    box-shadow:1px 1px 5px #000000;
+    border-color:#00000A;
+}
+#logo{
+    color:black;
+    font-family: 'Oleo Script', cursive;
+    font-weight:700;
+    font-style:italic;
+    transform:rotate(-18deg);
+}
+#welcomeTitle{
+    font-family: 'Amaranth', sans-serif;
+    font-weight:700;
+    color:black;
+    font-size:5em;
+    margin-top:1em;
+    text-align:center;
+}
+#welcomeMessage{
+    font-family: 'Amaranth', sans-serif;
+    font-weight:400;
+    font-style:italic;
+    color:black;
+    
+    font-size:5em;
+    
+    margin-top:1em;
+    text-align:center;
+}
+#welcomeTitleLogo{
+    color:black;
+    font-family: 'Oleo Script', cursive;
+    font-weight:700;
+    font-size:1em;
+    font-style:italic;
+    transform:rotate(-18deg);
+}
