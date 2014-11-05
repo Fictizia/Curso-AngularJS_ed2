@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" ng-app="miApp">
 <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -12,7 +12,7 @@
     <section class="container-fluid">
 		<section class="row">
 			<aside class="col-sm-3 col-md-2 sidebar">
-				<div>
+				<div ng-include="'templates/menu.html'">
 					[MENU]
 				</div>
 			</aside>
