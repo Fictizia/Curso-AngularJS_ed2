@@ -1,1 +1,6 @@
-menu cargado
+<ul class="nav nav-pills nav-stacked" 
+    role="tablist" 
+    ng-repeat="oElement in menuItems" 
+    ng-init="iStep = $index">
+  <li role="presentation" ng-class="active"><a href="#{{ oElement }}">{{ iStep }}: {{ oElement }}</a></li>
+</ul>
