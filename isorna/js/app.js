@@ -19,21 +19,18 @@ angular.module('myAppModule', ['ngRoute'])
     .controller('OtherPageController', ['$scope', function ($scope) {
         console.log('otra pagina cargada');
     }])
-    .config(['$routeProvider', function ($routeProvider, $locationProvider) {
+    .config(function ($routeProvider, $locationProvider) {
         $routeProvider 
         // Home
-        .when("/", {templateUrl: "partials/home.html", controller: "HomePageController"});
+        .when("/", {templateUrl: "partials/home.html", controller: "HomePageController"})
+        .when("/Home", {templateUrl: "partials/home.html", controller: "HomePageController"})
         // Pages
-        //.when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
-        //.when("/faq", {templateUrl: "partials/faq.html", controller: "PageCtrl"})
-        // Blog
-        //.when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
-        //.when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
+        .when("/about", {templateUrl: "partials/about.html", controller: "OtherPageController"})
         // else 404
-        //.otherwise("/404", {templateUrl: "partials/404.html", controller: "OtherPageController"});
+        .otherwise("/404", {templateUrl: "partials/404.html", controller: "OtherPageController"});
         // configure html5 to get links working on jsfiddle
         $locationProvider.html5Mode(true);
-    }])
+    })
     .controller('BlogCtrl', function ($scope, $location, $http) {
         console.log("Blog Controller reporting for duty.");
     })
