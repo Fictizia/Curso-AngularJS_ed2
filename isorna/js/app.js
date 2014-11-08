@@ -2,7 +2,7 @@
 'use scrict';
 
 // Use Fluent code style guide, no globals!
-angular.module('myAppModule', ['ngRoute'])
+angular.module('myAppModule', [/*'ngRoute'*/])
     .controller('MenuController', ['$scope', function ($scope) {
         // $scope variables
         $scope.URL_MENU = 'templates/menu.html';

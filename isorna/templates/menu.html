@@ -1,6 +1,7 @@
 <ul class="nav nav-pills nav-stacked" 
-    role="tablist" 
+    role="tablist" >
+  <li 
     ng-repeat="oElement in menuItems" 
-    ng-init="iStep = $index">
-  <li role="presentation" ng-class="active"><a href="#{{ oElement }}">{{ iStep }}: {{ oElement }}</a></li>
+    ng-init="iStep = $index"
+    role="presentation" ng-class="active"><a href="#{{ oElement }}">{{ iStep }}: {{ oElement }}</a></li>
 </ul>
