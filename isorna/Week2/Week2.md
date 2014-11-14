@@ -9,6 +9,7 @@ Week 2 Milestone
 * Route
 
 ## New directives
+
 * Use of __data-ng-directiveName__ for HTML5 validation.
 * __`ng-repeat`__, __`ng-init`__ & __`$index`__.
 * __`ng-click`__.

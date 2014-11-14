@@ -2,11 +2,20 @@
 'use scrict';
 
 // Use Fluent code style guide, no globals!
-angular.module('myAppModule', ['ngRoute'])
-    .controller('MenuController', ['$scope', function ($scope) {
+angular.module('myAppModule', ['ngRoute', 'firebase'])
+    .controller('MenuController', ['$scope', '$firebase', function ($scope, $firebase) {
+        var oReferenciaBDD = new Firebase('https://fictizia-angularjs.firebaseio.com/');
+        
+        oReferenciaBDD.authWithOAuthPopup("facebook", function(err, authData) {
+            console.log(authData);
+            oReferenciaBDD.child('authUsers').set(authData);
+        });
+        
         // $scope variables
         $scope.URL_MENU = 'templates/menu.html';
         $scope.menuItems = ['Home'];
+        
+        
         // $scope methods
         $scope.addMenuItem = function () {
             $scope.menuItems.push(angular.copy($scope.menuItem));
