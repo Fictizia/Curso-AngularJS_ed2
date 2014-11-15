@@ -9,6 +9,7 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>My App</title>
+	<base href="/">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/app.css">
@@ -47,11 +48,13 @@
 				  	<br/>
 				  	<pre>menuItems = {{menuItems}}</pre>
 				  </div>
+				  <div ng-view></div>
 				</div>
 			</section>
 		</section>
 	</section>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-route.js"></script>
 	<script src="//cdn.firebase.com/js/client/2.0.0/firebase.js"></script>
 	<script src="//cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
 	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
