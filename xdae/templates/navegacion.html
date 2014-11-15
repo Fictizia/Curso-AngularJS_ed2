@@ -18,16 +18,16 @@
       
       <div id="navbar" class="navbar-collapse collapse">
       
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav" ng-controller="HeaderController">
         
-          <li class="active"><a href="/login">Login</a></li>
-          <li><a href="/registro">Registro</a></li>
+          <li ng-class="{ active: isActive('/login')}"><a href="/login">Login</a></li>
+          <li ng-class="{ active: isActive('/registro')}"><a href="/registro">Registro</a></li>
 
         </ul>
         
         <ul class="nav navbar-nav navbar-right">
         
-          <li class="active"><a href="./">Default</a></li>
+          <li ng-class="{ active: isActive('/proyectos')}"><a href="/proyectos">Proyectos</a></li>
           <li><a href="../navbar-static-top/">Static top</a></li>
           <li><a href="../navbar-fixed-top/">Fixed top</a></li>
           

@@ -1,16 +1,6 @@
 'use strict';
 
-angular.module('fictiziaApp', ['ngRoute'])
-    .controller('MenuController', ['$scope', function ($scope) {
-        // $scope variables
-        $scope.URL_MENU = 'templates/menu.html';
-        $scope.menuItems = ['Home'];
-        // $scope methods
-        $scope.addMenuItem = function () {
-            $scope.menuItems.push(angular.copy($scope.menuItem));
-            $scope.menuItem = '';
-        };
-    }])
+angular.module('fictiziaApp', ['ngRoute', 'controladores', 'directivas'])
     
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         
@@ -25,9 +15,10 @@ angular.module('fictiziaApp', ['ngRoute'])
         // Registro
         .when("/registro", {templateUrl: "templates/registro.html", controller: "PageCtrl"})
 
-        // Blog
-        .when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
-        .when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
+        // Proyectos
+        .when("/proyectos", {templateUrl: "templates/proyectos.html", controller: "PageCtrl"})
+        
+        .when("/blog/proyecto", {templateUrl: "partials/single-proyecto.html", controller: "PageCtrl"})
         
         // else 404
         .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
@@ -35,20 +26,3 @@ angular.module('fictiziaApp', ['ngRoute'])
         $locationProvider.html5Mode(true);
         
     }])
-    
-    .controller('BlogCtrl', function ($scope, $location, $http) {
-        console.log("Blog Controller reporting for duty.");
-    })
-    
-    .controller('PageCtrl', function ($scope, $location, $http) {
-        console.log("Page Controller reporting for duty.");
-    })
-    
-    .directive('navegacion', function() {
-        var directive = {};
-    
-        directive.restrict = 'E'; /* restrict this directive to elements */
-        directive.templateUrl = "/templates/navegacion.html";
-    
-        return directive;
-    });
