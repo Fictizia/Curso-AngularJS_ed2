@@ -1,29 +1,44 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" ng-app="miApp" ng-controller="Controller">
 <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Page Title</title>
+	<base href="/"></base>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body ng-cloak>
     <section class="container-fluid">
 		<section class="row">
-			<aside class="col-sm-3 col-md-2 sidebar">
-				<div>
-					[MENU]
+			
+   			 <div class="col-xs-12 col-md-8"></div>
+
+			<aside class="col-xs-12 col-md-4">
+				<div ng-include="'templates/menu_lateral.html'">
+				
 				</div>
 			</aside>
-			<section class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-				<div>
-					[CONTENT]
-				</div>
+			<section class="col-sm-9 col-sm-offset-1 col-md-9 col-md-offset-2 ">
+			
+				<div ng-view></div>
+				
 			</section>
+			
+			
+		</section>
+		
+		<section class="row">
+			<aside class="col-sm-12 col-md-12  sidebar">
+			
+				
+				</div>
+			</aside>
 		</section>
 	</section>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-route.js"></script>
 	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
 	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
