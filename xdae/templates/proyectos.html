@@ -1,0 +1,36 @@
+<div ng-controller="FilterController as ctrl">
+    
+    <form class="form-inline" role="form">
+
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputPassword2">Password</label>
+            <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Filtrar por..." ng-model="proyecto.name">
+        </div>
+      
+        <div class="checkbox">
+            
+            <label>
+                <input type="checkbox" ng-model="proyecto.terminado"> Proyectos Terminados
+            </label>
+            
+        </div>
+        
+    </form>
+    
+    <h4>Filtrando por: {{nombreProyecto}}</h4>
+    
+    <div ng-repeat="kaka in ctrl.array | filter:proyecto" class="panel panel-default">
+        
+        <div class="panel-heading">
+            
+            <h3 class="panel-title">{{ kaka.name }}</h3>
+            
+        </div>
+        
+        <div class="panel-body">
+            Proyecto terminado: {{ kaka.terminado }}
+        </div>
+      
+    </div>
+
+</div>
