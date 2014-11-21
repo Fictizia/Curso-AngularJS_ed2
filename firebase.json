@@ -1,0 +1,10 @@
+{
+  "firebase": "fictizia-angularjs",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/_githidden",
+    "**/node_modules/**"
+  ]
+}

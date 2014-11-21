@@ -19,7 +19,7 @@
 		<section class="row">
 			<aside 
 				class="col-sm-3 col-md-2 sidebar" 
-				ng-show="menuItems.length > 1">
+				ng-show="menuItems.length > 0">
 				<div ng-include="URL_MENU"></div>
 			</aside>
 			<section class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -47,6 +47,7 @@
 				  	</form>
 				  	<br/>
 				  	<pre>menuItems = {{menuItems}}</pre>
+				  	<pre>ruta = {{ruta}}</pre>
 				  </div>
 				  <div ng-view></div>
 				</div>

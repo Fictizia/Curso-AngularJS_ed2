@@ -1,9 +1,10 @@
-/* globals angular */
+/* globals angular, Firebase */
 'use scrict';
 
 // Use Fluent code style guide, no globals!
 angular.module('myAppModule', ['ngRoute', 'firebase'])
-    .controller('MenuController', ['$scope', '$firebase', function ($scope, $firebase) {
+    .constant('ruta', 'home')
+    .controller('MenuController', ['$scope', '$firebase', 'ruta', function ($scope, $firebase, ruta) {
         var oReferenciaBDD = new Firebase('https://fictizia-angularjs.firebaseio.com/');
         
         oReferenciaBDD.authWithOAuthPopup("facebook", function(err, authData) {
@@ -14,7 +15,7 @@ angular.module('myAppModule', ['ngRoute', 'firebase'])
         // $scope variables
         $scope.URL_MENU = 'templates/menu.html';
         $scope.menuItems = ['Home'];
-        
+        $scope.rutaActual = ruta;
         
         // $scope methods
         $scope.addMenuItem = function () {
@@ -22,10 +23,14 @@ angular.module('myAppModule', ['ngRoute', 'firebase'])
             $scope.menuItem = '';
         };
     }])
-    .controller('HomePageController', ['$scope', function ($scope) {
+    .controller('HomePageController', ['$scope', 'ruta', '$location', function ($scope, ruta, $location) {
+        ruta = 'home';
+        $scope.rutaActual = ruta;
         console.log('home cargada');
     }])
-    .controller('OtherPageController', ['$scope', function ($scope) {
+    .controller('OtherPageController', ['$scope', 'ruta', '$location', function ($scope, ruta, $location) {
+        ruta = $location.path();
+        $scope.rutaActual = ruta;
         console.log('otra pagina cargada');
     }])
     .config(function ($routeProvider, $locationProvider) {
@@ -36,7 +41,8 @@ angular.module('myAppModule', ['ngRoute', 'firebase'])
         // Pages
         .when("/about", {templateUrl: "partials/about.html", controller: "OtherPageController"})
         // else 404
-        .otherwise("/404", {templateUrl: "partials/404.html", controller: "OtherPageController"});
+        .when("/404", {templateUrl: "partials/404.html", controller: "OtherPageController"})
+        .otherwise({redirectTo: "/404"});
         // configure html5 to get links working on jsfiddle
         $locationProvider.html5Mode(true);
     })

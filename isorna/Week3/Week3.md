@@ -58,6 +58,7 @@ Take a look at `modules.js` for code explanation.
 
 * Use `ng-class` whenever it's appropiate.
 * Structure your app so that configurable values are stored with the `value()` method.
+* Create a new `directives.js` file for your future directive modules.
 * Create and use a custom filter for your app.
 * Use a custom __element__ directive, and a different __attribute__ directive in your app.
 * Create custom directives for showing templates, instead of `ng-include`, so that you can manage your directive's controller.
