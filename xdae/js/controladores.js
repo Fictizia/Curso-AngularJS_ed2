@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('controladores', [])
+angular.module('controladores', ['factorias'])
 
-    .controller('PageCtrl', ['$scope', function ($scope, ruta) {
+    .controller('PageCtrl', ['$scope', function ($scope) {
       
     }])
     
@@ -14,7 +14,42 @@ angular.module('controladores', [])
         
     }])
     
-    .controller('FilterController', [ '$scope', 'filterFilter', function($scope, filterFilter) {
+    .controller('crearUsuario', ['$scope', '$firebase', 'ruta', function ($scope, $firebase, ruta) {
+        
+        var oReferenciaBDD = new Firebase('https://fictizia-angularapp.firebaseIO.com/');
+        
+        oReferenciaBDD.authWithOAuthPopup("facebook", function(err, authData) {
+            console.log(authData);
+            oReferenciaBDD.child('authUsers').set(authData);
+        });
+        
+        // $scope variables
+        $scope.URL_MENU = 'templates/menu.html';
+        $scope.menuItems = ['Home'];
+        $scope.rutaActual = ruta;
+        
+        // $scope methods
+        $scope.addMenuItem = function () {
+            $scope.menuItems.push(angular.copy($scope.menuItem));
+            $scope.menuItem = '';
+        };
+        
+    }])
+    
+    .controller('carritoCtrl',['$scope', 'listaCamisetas', 'carrito', function($scope, listaCamisetas, carrito) {
+        
+        $scope.camisetas = listaCamisetas;
+        
+        $scope.anadir = function(miCamiseta) {
+            
+            carrito.addCamiseta(miCamiseta);
+            
+        }
+        
+        
+    }])
+    
+    .controller('FilterController', ['$scope', 'filterFilter', function($scope, filterFilter) {
         
         this.array = [
             

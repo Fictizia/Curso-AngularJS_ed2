@@ -1,7 +1,9 @@
 'use strict';
 
-angular.module('fictiziaApp', ['ngRoute', 'directivas', 'filtros', 'controladores'])
-    
+angular.module('fictiziaApp', ['ngRoute', 'directivas', 'filtros', 'controladores', 'usuarios'])
+
+    .value ('listaCamisetas', ['betis', 'madrid', 'barcelona', 'celta'])
+        
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         
         $routeProvider
@@ -39,6 +41,12 @@ angular.module('fictiziaApp', ['ngRoute', 'directivas', 'filtros', 'controladore
         .when("/clientes", {
             templateUrl: "templates/clientes.html", 
             controller: "PageCtrl"
+        })
+        
+        // Clientes
+        .when("/carrito", {
+            templateUrl: "templates/carrito.html", 
+            controller: "carritoCtrl"
         })
         
         // else 404
