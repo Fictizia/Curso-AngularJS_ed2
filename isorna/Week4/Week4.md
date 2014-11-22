@@ -50,6 +50,8 @@ Week 4 Milestone
 * [Full Firebase Configuration](https://www.firebase.com/docs/hosting/guide/full-config.html).
 * [Security & Rules](https://www.firebase.com/docs/security/quickstart.html).
 * [User Based Security](https://www.firebase.com/docs/security/guide/user-security.html).
+* [Saving Data](https://www.firebase.com/docs/web/guide/saving-data.html).
+* [Retrieving Data](https://www.firebase.com/docs/web/guide/retrieving-data.html).
 
 ## Practice
 
