@@ -9,6 +9,7 @@ Week 5 Milestone
 * Factories
 * Special Purpose Objects
 * Firebase
+* __From last practice:__ [use $routeProvider to send parameters to routes](http://tutorials.jenkov.com/angularjs/routes.html).
 
 ## Animations with AngularJS
 

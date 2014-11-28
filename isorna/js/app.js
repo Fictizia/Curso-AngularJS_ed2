@@ -23,10 +23,10 @@ angular.module('myAppModule', ['ngRoute', 'firebase'])
             $scope.menuItem = '';
         };
     }])
-    .controller('HomePageController', ['$scope', 'ruta', '$location', function ($scope, ruta, $location) {
+    .controller('HomePageController', ['$scope', 'ruta', '$location', function ($scope, ruta, $location, $routeParams) {
         ruta = 'home';
         $scope.rutaActual = ruta;
-        console.log('home cargada');
+        console.log('home cargada', $routeParams.param);
     }])
     .controller('OtherPageController', ['$scope', 'ruta', '$location', function ($scope, ruta, $location) {
         ruta = $location.path();
@@ -37,7 +37,7 @@ angular.module('myAppModule', ['ngRoute', 'firebase'])
         $routeProvider 
         // Home
         .when("/", {templateUrl: "partials/home.html", controller: "HomePageController"})
-        .when("/Home", {templateUrl: "partials/home.html", controller: "HomePageController"})
+        .when("/Home:param", {templateUrl: "partials/home.html", controller: "HomePageController"})
         // Pages
         .when("/about", {templateUrl: "partials/about.html", controller: "OtherPageController"})
         // else 404
