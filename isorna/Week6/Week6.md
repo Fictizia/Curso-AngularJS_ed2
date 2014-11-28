@@ -3,11 +3,21 @@ Week 6 Milestone
 
 ## Review last class
 
-* ...
+* Animations with AngularJS
+* AngularJS and Material Design
+* Famous-Angular integration
+* Other integrations
 
-## Unit Testing
+## Unit Testing and E2E Testing
 
-* [Introduction to Unit Testing directives](http://angular-tips.com/blog/2014/06/introduction-to-unit-test-directives/).
+* [Unit Testing](http://www.smashingmagazine.com/2012/06/27/introduction-to-javascript-unit-testing/).
+ * [AngularJS Unit Testing](https://docs.angularjs.org/guide/unit-testing).
+ * [Jasmine](http://jasmine.github.io/) and [Karma](http://karma-runner.github.io/0.12/index.html).
+ * [Introduction to Unit Testing directives](http://angular-tips.com/blog/2014/06/introduction-to-unit-test-directives/).
+* E2E Testing.
+ * [AngularJS E2E Testing](https://docs.angularjs.org/guide/e2e-testing).
+ * [Protractor for AngularJS](http://angular.github.io/protractor/#/).
+* [Advanced Testing and Debugging in AngularJS](http://www.yearofmoo.com/2013/09/advanced-testing-and-debugging-in-angularjs.html).
 
 ## Silver Bullets
 
@@ -18,4 +28,4 @@ Week 6 Milestone
 
 ## Practice
 
-* ...
+* Finish your application.
