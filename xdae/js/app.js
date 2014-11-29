@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('fictiziaApp', ['ngRoute', 'directivas', 'filtros', 'controladores', 'usuarios'])
+angular.module('fictiziaApp', ['ngRoute', 'directivas', 'filtros', 'controladores', 'usuarios', 'ngMessages', 'ngAnimate'])
 
     .value ('listaCamisetas', ['betis', 'madrid', 'barcelona', 'celta'])
         
@@ -30,6 +30,11 @@ angular.module('fictiziaApp', ['ngRoute', 'directivas', 'filtros', 'controladore
         .when("/proyectos", {
             templateUrl: "templates/proyectos.html", 
             controller: "PageCtrl"
+        })
+        
+        .when("/proyecto/:id", {
+            templateUrl: "templates/proyecto-single.html", 
+            controller: "FilterController"
         })
 
         .when("/proyecto-single", {

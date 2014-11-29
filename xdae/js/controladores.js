@@ -3,6 +3,8 @@
 angular.module('controladores', ['factorias'])
 
     .controller('PageCtrl', ['$scope', function ($scope) {
+        
+        console.log('hola hola');
       
     }])
     

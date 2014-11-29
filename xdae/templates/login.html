@@ -9,7 +9,7 @@
             <div class="form-panel">
 
 
-                <form class="form-horizontal">
+                <form name="formlogin" class="form-horizontal">
                     <fieldset>
                      
                     <!-- Form Name -->
@@ -20,7 +20,7 @@
                     <div class="form-group">
                       <label class="col-md-4 control-label" for="usuario">Usuario</label>  
                       <div class="col-md-4">
-                      <input id="usuario" name="usuario" type="text" placeholder="Nombre de usuario" class="form-control input-md" required="">
+                      <input id="usuario" name="usuario" ng-model="usuario" type="text" placeholder="Nombre de usuario" class="form-control input-md" required>
                         
                       </div>
                     </div>
@@ -29,7 +29,7 @@
                     <div class="form-group">
                       <label class="col-md-4 control-label" for="password">Contraseña</label>
                       <div class="col-md-4">
-                        <input id="password" name="password" type="password" placeholder="Contraseña" class="form-control input-md" required="">
+                        <input id="password" name="password" ng-model="password" type="password" placeholder="Contraseña" class="form-control input-md" required>
                         
                       </div>
                     </div>
@@ -50,6 +50,10 @@
                       <div class="col-md-4">
                         <button id="submit" name="submit" class="btn btn-primary">Entrar</button>
                       </div>
+                    </div>
+                    
+                    <div ng-messages="formlogin.usuario.$error" ng-messages-multiple>
+                        <div class="alert alert-danger" ng-message="required"><b>Error!</b> El nombre de usuario es obligatorio</div>
                     </div>
                     
                     </fieldset>
