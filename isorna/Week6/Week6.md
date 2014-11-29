@@ -25,6 +25,7 @@ Week 6 Milestone
 * [Creating a CRUD App in Minutes with Angular’s $resource](http://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/).
 * [Authentication in Angular applications](http://www.sitepoint.com/implementing-authentication-angular-applications/).
 * [Cancelling route navigation in AngularJS](http://weblogs.asp.net/dwahlin/cancelling-route-navigation-in-angularjs).
+* [Ionic Framework](http://ionicframework.com/).
 
 ## Practice
 
