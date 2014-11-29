@@ -33,7 +33,7 @@ Week 5 Milestone
 
 ## Other integrations
 
-* [Foundation and AngularJS](http://zurb.com/article/1345/design-amazing-single-page-apps-with-the-).
+* [Foundation and AngularJS](http://zurb.com/article/1345/design-amazing-single-page-apps-with-the-). [Foundation framework](http://foundation.zurb.com/).
 * [Angular UI](http://angular-ui.github.io/).
 
 ## Practice
