@@ -21,11 +21,14 @@ Week 6 Milestone
 
 ## Silver Bullets
 
-* [Scope inheritance in AngularJS](https://cfdeepak.wordpress.com/2014/10/18/playing-with-scope-inheritance-in-angular/).
-* [Creating a CRUD App in Minutes with Angular’s $resource](http://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/).
+* __$parent:__ [Scope inheritance in AngularJS](https://cfdeepak.wordpress.com/2014/10/18/playing-with-scope-inheritance-in-angular/).
+* __$resource:__ [Creating a CRUD App in Minutes with Angular’s $resource](http://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/).
 * [Authentication in Angular applications](http://www.sitepoint.com/implementing-authentication-angular-applications/).
-* [Cancelling route navigation in AngularJS](http://weblogs.asp.net/dwahlin/cancelling-route-navigation-in-angularjs).
+* __$locationChangeStart, $routeChangeStart:__ [Cancelling route navigation in AngularJS](http://weblogs.asp.net/dwahlin/cancelling-route-navigation-in-angularjs).
 * [Ionic Framework](http://ionicframework.com/).
+ * [Where does the Ionic Framework fit in?](http://ionicframework.com/blog/where-does-the-ionic-framework-fit-in/).
+ * [Cookie-based Authentication in AngularJS](http://ionicframework.com/blog/angularjs-authentication/).
+ * [Publishing your Ionic application](http://ionicframework.com/docs/guide/publishing.html).
 
 ## Practice
 
