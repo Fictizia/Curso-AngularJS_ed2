@@ -8,6 +8,10 @@ angular.module('trippin', ['ngRoute', 'firebase'])
                     templateUrl: 'templates/home.html',
                     controller: 'HomeController'
                     })
+                .when('/about', {
+                    templateUrl: 'templates/about.html',
+                    controller: 'AboutController'
+                })
                 .when('/newart', {
                     templateUrl: 'templates/new.html',
                     controller: 'NewArtController'
@@ -45,10 +49,10 @@ angular.module('trippin', ['ngRoute', 'firebase'])
                     subheader: $scope.subheader,
                     body: $scope.body
                 });
-                $scope.header = '';
-                $scope.subheader = '';
+                /*$scope.header = '';
+               // $scope.subheader = '';
                 $scope.body = '';
-                
+                */
                 if(sube){
                     console.log('subido archivo');
                 }
@@ -57,19 +61,37 @@ angular.module('trippin', ['ngRoute', 'firebase'])
                 }
             }
         }])
+        //Info
+        .controller('AboutController', ['$scope', 'mySelf', function ($scope, mySelf) {
+            $scope.name = mySelf.name;
+            $scope.surname = mySelf.surname;
+            $scope.work = mySelf.prof;
+            $scope.town = mySelf.currentTown;
+        }])
+/////////////////////////////////////////////////////////////////        //.controller('FooterController', ['$scope'])
+        
         
         .directive('status', function(){
             var directive = {};
     
             directive.restrict = 'E'; /* restrict this directive to elements */
             directive.templateUrl = "/templates/status.html";
-    
+////////////////////////////////////////////////////////////////        //    controller: 'FooterController'
             return directive;
         })
         
         .value('firebaseURL', 'https://trippin4.firebaseio.com/')
         .factory('Article', function ArticleFactory(firebaseURL, $firebase){
             return $firebase(new Firebase(firebaseURL)).$asArray();
+        })
+        .factory('mySelf', function mySelfFactory(){
+            var mySelf = {
+                name: 'Deogracias',
+                surname: 'Maroto',
+                prof: 'Student/work',
+                currentTown: 'Madrid'
+            };
+            return mySelf;
         })
                 
                 

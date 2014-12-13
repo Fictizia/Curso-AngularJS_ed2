@@ -53,3 +53,11 @@
     font-family:Helvetica;
     color:white;
 }
+.SweetAngular{
+    font-family: 'Oleo Script', cursive;
+    font-weight:700;
+    -webkit-transition:all .5s ease-in-out;
+}
+.CoolAngular{
+    color:red;
+}

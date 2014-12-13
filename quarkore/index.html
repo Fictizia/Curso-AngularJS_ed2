@@ -13,15 +13,17 @@
 <body ng-cloak>
     
     <fa-app ng-controller='FamousController' id="famOne">
-          <fa-surface fa-background-color="'#BF988F'" ng-include="'templates/navigation-template.html'">
-              
+          <fa-surface fa-background-color="'#BF988F'">
+              <a href="/newart">nuevo</a>
+              <a href="/about">Who am I?</a>
+              <a href="/">home</a>
           </fa-surface>
     </fa-app> 
     
     
-    <h1 id="welcomeTitle">Welcome to <i id="welcomeTitleLogo">TRIPPIN'</i> !</h1>
-    <h2 id="welcomeMessage">Where you can share and discover trips around the world.</h2>
-    <a href="/newart">nuevo</a>
+    <!--h1 id="welcomeTitle">Welcome to <i id="welcomeTitleLogo">TRIPPIN'</i> !</h1>
+    <h2 id="welcomeMessage">Where you can share and discover trips around the world.</h2-->
+    
     <div ng-view></div>
     
     <status></status>

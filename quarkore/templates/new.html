@@ -1,17 +1,23 @@
-<form ng-submit="addArt()">
+
+<br/><form ng-submit="addArt()">
   <div class="form-group">
     <label>header:</label>
     <input type="text" ng-model="header" class="form-control">
   </div>
   <div class="form-group">
     <label>sub header:</label>
-    <input type="text" ng-model="subheader" class="form-conrol">
+    <input type="text" ng-value="subheader" class="form-conrol">
   </div>
   <div class="form-group">
     <label>body:</label>
-    <input type="textarea" ng-model="body" class="form-conrol">
+    <input type="textarea" ng-value="body" class="form-conrol">
   </div>
   <div class="form-group">
     <input type="submit" value="sube" class="btn btn-primary">
   </div>
 </form>
+
+
+<h1>{{ header }}</h1>
+<h2>{{ subheader }}</h2>
+<p>{{ body }}</p>
