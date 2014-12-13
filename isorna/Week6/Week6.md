@@ -18,6 +18,7 @@ Week 6 Milestone
  * [AngularJS E2E Testing](https://docs.angularjs.org/guide/e2e-testing).
  * [Protractor for AngularJS](http://angular.github.io/protractor/#/).
 * [Advanced Testing and Debugging in AngularJS](http://www.yearofmoo.com/2013/09/advanced-testing-and-debugging-in-angularjs.html).
+* [Testing with Hudson(Jenkins)](http://www.xnoccio.com//362-hudson-parte-1-introduccion/).
 
 ## Silver Bullets
 
@@ -29,6 +30,8 @@ Week 6 Milestone
  * [Where does the Ionic Framework fit in?](http://ionicframework.com/blog/where-does-the-ionic-framework-fit-in/).
  * [Cookie-based Authentication in AngularJS](http://ionicframework.com/blog/angularjs-authentication/).
  * [Publishing your Ionic application](http://ionicframework.com/docs/guide/publishing.html).
+ * [ngCordova](http://ngcordova.com/).
+* [GitHub JSPro user for example apps](https://github.com/jsprodotcom).
 
 ## Practice
 
