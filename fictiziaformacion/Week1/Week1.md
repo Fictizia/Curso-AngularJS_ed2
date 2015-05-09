@@ -17,7 +17,7 @@ __Workspace configuration__
 * Our working tool will be Google Chrome, with __AngularJS Batarang__ developer extension.
 * Our project will be saved on a [GitHub](http://github.com/) repository, I've to add your users as project collaborators.
  * Setup git: `git config remote.origin.push HEAD`.
- * Git commands: `git add`, `git commit -m "Message"`, `git push`, `git pull`.
+ * Git commands: `git add`, `git rm`, `git commit -m "Message"`, `git push`, `git pull`.
  * Remember to use Gists if you need them!.
 * We use [c9.io](http://c9.io/) as a coding platfform, you must clone our github project from the Dashboard.
 * We'll use a [Firebase](http://firebase.com/) database and hosting, you'll have to create a Firebase account and then build a local working __angularfire-seed__ instance of your app (I'll explain, no worries).
