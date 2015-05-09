@@ -9,7 +9,7 @@ __What's AngularJS?__
  * It's not meant for high-intensive DOM manipulation apps, like games.
  * AngularJS gives the same value to testing than developing.
 * Generic MVC explanation.
-* Take a look at [this sample application](fictizia-angularjs.firebaseapp.com/), open chrome developer tools.
+* Take a look at [this sample application](http://fictizia-angularjs.firebaseapp.com/), open chrome developer tools.
 * Talk briefly about AngularJS dependency injection.
 
 __Workspace configuration__
