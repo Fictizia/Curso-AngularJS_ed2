@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body ng-cloak>
+    
+    <ul class="menu" ng-controller="MenuController">
+        <li><a href="#/home" ng-click="menuClick($event)">home ({{contadorDeClicks}})</a></li>
+        <li><a href="#/chat">chat</a></li>
+        <li ng-hide="loggedIn"><a href="#/login">login</a></li>
+        <li ng-show="loggedIn"><a href="#/account">account</a></li>
+    </ul>
+      
+    <form ng-controller="FormController">
+        <input type="text" name="login" ng-model="loginModel" />
+        <a href="#click" ng-click="formClick($event)">form ({{padre.contadorDeClicks}})</a>
+        <p>Your login is {{loginModel}}</p>
+    </form>
+      
+    <form ng-controller="FormController">
+        <input type="text" name="login" ng-model="loginModel" />
+        <a href="#click" ng-click="formClick($event)">form ({{padre.contadorDeClicks}})</a>
+        <p>Your login is {{loginModel}}</p>
+        
+        <div ng-controller="ClickController">
+            Mi Click es: <span>{{padre.contadorDeClicks}}</span>
+        </div>
+        
+    </form>
+    
+    
+    <div ng-view></div>
+    
+    <div>AngularFire-seed v<span app-version></span></div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+    
+    <script src="app.js"></script>
+
+</body>
+</html>
