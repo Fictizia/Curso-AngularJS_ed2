@@ -11,12 +11,10 @@ angular.module('kplAngularCero', [])
         }
     }])
     .controller('FormController', ['$scope', function ($scope) {
-        $scope.contadorDeClics = 0;
-        $scope.contadorDeClics++;
         $scope.inputModel = 0;
         $scope.formClick = function (poEvent) {
-            $scope.inputModel += $scope.contadorDeClics;
-            console.log('click in FORM')
+            $scope.inputModel++;
+            console.log('Click ' + $scope.inputModel + ' in FORM')
             poEvent.preventDefault();
             poEvent.stopPropagation();
         }
