@@ -9,7 +9,7 @@ __What's AngularJS?__
  * It's not meant for high-intensive DOM manipulation apps, like games.
  * AngularJS gives the same value to testing than developing.
 * Generic MVC explanation.
-* Take a look at [this sample application](fictizia-angularjs.firebaseapp.com/), open chrome developer tools.
+* Take a look at [this sample application](http://fictizia-angularjs.firebaseapp.com/), open chrome developer tools.
 * Talk briefly about AngularJS dependency injection.
 
 __Workspace configuration__
@@ -17,11 +17,13 @@ __Workspace configuration__
 * Our working tool will be Google Chrome, with __AngularJS Batarang__ developer extension.
 * Our project will be saved on a [GitHub](http://github.com/) repository, I've to add your users as project collaborators.
  * Setup git: `git config remote.origin.push HEAD`.
- * Git commands: `git add`, `git commit -m "Message"`, `git push`, `git pull`.
+ * Git commands: `git add`, `git rm`, `git commit -m "Message"`, `git push`, `git pull`.
  * Remember to use Gists if you need them!.
 * We use [c9.io](http://c9.io/) as a coding platfform, you must clone our github project from the Dashboard.
 * We'll use a [Firebase](http://firebase.com/) database and hosting, you'll have to create a Firebase account and then build a local working __angularfire-seed__ instance of your app (I'll explain, no worries).
- * Firebase commands: `sudo firebase bootstrap`, `sudo firebase deploy`.
+ * Install firebase: `sudo npm install -g firebase-tools`.
+ * Firebase commands: `firebase bootstrap`, `firebase deploy`.
+ * Change to your project folder and update bower installation: `npm install`.
 * Our project will be based on [AngularJS](https://angularjs.org/) and [Bootstrap](http://getbootstrap.com/) for quick style markup.
 * We'll start with simple html page, pointing to the libraries we'll use, create a folder with your __GitHub username__ and copy `/isorna/app-index.html` inside it.
 
