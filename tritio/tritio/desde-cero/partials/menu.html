@@ -1,0 +1,7 @@
+<ul class="menu" ng-controller="MenuController">
+  <!--  <li><a href="./home" ng-click="menuClick($event)">home</a>{{contadorDeClicks}}</li> -->
+      <li><a href="./">home</a></li>
+    <li><a href="./chat">chat</a></li>
+    <li ng-hide="loggedIn"><a href="./login">login</a></li>
+    <li ng-show="loggedIn"><a href="#/account">account</a></li>
+</ul>
