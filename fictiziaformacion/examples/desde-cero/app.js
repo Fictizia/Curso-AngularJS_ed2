@@ -25,11 +25,11 @@ angular.module('myApp', ['ngRoute', 'modulo.home', 'modulo.chat', 'modulo.detail
             templateUrl: oURLs.templates.notFound
         });
     }])
-    .controller('AppCtrl', ['$rootScope', 'oURLs', '$location', function ($rootScope, oURLs, $location) {
+    .controller('AppCtrl', ['$rootScope', function ($rootScope) {
         $rootScope.$on("$routeChangeError", function (event, current, previous, rejection) {
             console.log(rejection);
           //if (err === "AUTH_REQUIRED") {
-            $location.path(oURLs.paths.login);
+            //$location.path(oURLs.paths.login);
           //}
         });
     }])
