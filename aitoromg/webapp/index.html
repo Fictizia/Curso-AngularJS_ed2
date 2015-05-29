@@ -5,12 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>My AngularJS App</title>
   <meta name="description" content="">
+  <base href="/aitoromg/webapp/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
  </head>
 <body ng-cloak>
+  
+  <div ng-controller="HeaderController">
+    <div ng-include="url_menu"></div>
+  </div>
+  
+  <div ng-view></div>
 
-  <ul class="menu" ng-controller="MenuController">
+  <!-- <ul class="menu" ng-controller="MenuController">
     <span ng-bind="name"></span>
     <li><a href="#/home" ng-click="menuClick($event)">home {{contador}}</a></li>
     <li><a href="#/chat">chat</a></li>
@@ -26,13 +33,19 @@
       <input type="number" name="login" ng-model="loginModel"/>
       <input type="submit" value="Submit" ng-click="menuClick($event)"/> {{contador}}
       <h2> Your name is {{loginModel}}</h2>
-  </form>
+  </form> -->
 
     
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+  
+  <script src="home/home.js"></script>
+  <script src="chatdet/index.js"></script>
+  <script src="chat/index.js"></script>
+  <script src="db/index.js"></script>
   <script src="app.js"></script>
+  
  
 </body>
 </html>

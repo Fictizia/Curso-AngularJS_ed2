@@ -1,0 +1,8 @@
+<h1>Home</h1>
+
+<section>
+    <p>Hola {{miNombre}}</p>
+    <ul>
+        <li ng-repeat="coche in coches"><a ng-href="./detail/{{coche.matricula}}/{{coche.color}}">{{coche.matricula}}</a></li>
+    </ul>
+</section>

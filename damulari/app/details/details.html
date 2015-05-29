@@ -1,0 +1,8 @@
+<div ng-controller="DetailsCtrl">
+    <h1>Details</h1>
+    <ul>
+        <li ng-repeat="car in cars">
+            <a ng-href="./detail/{{ car.color}}">{{ car.model }}</a>
+        </li>
+    </ul>
+</div>

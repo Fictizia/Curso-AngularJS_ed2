@@ -1,0 +1,9 @@
+{
+  "firebase": "aitoromg-angularjs",
+  "public": "app",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
