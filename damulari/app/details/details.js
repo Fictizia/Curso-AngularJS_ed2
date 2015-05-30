@@ -7,19 +7,19 @@ angular
   ])
   .constant('appURLS', {
     templates : {
-      home    : 'home/home.html',
+      details    : 'details/details.html',
     }
   })
   
   .config(['$routeProvider','appURLS', function($routeProvider, appURLS){
     $routeProvider
-      .when('/', {
-        templateUrl : appURLS.templates.home,
-        controller  : 'HomeCtrl'
+      .when('/details/', {
+        templateUrl : appURLS.templates.details,
+        controller  : 'DetailsCtrl'
       })
   }])
 
-  .controller('DetailsCtrl',['$scope', 'appURLS', 'appDB' function($scope, appURLS, appDB){
+  .controller('DetailsCtrl',['$scope', 'appURLS', 'appDB', function($scope, appURLS, appDB){
     $scope.cars = appDB.cars;
   }])
 ;

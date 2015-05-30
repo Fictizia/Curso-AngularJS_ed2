@@ -1,8 +1,12 @@
 <div ng-controller="HomeCtrl">
     <h1>Hello {{ myName }}!</h1>
+    <span>{{ date }}</span>
 </div>
 <div class="list">
     <ul>
-        <li ng-repeat="item in items"></li>
+        <li ng-repeat="car in cars">
+            <a href="./detail/{{ car.color }}">{{ car.model }}</a>
+        </li>
     </ul>
 </div>
+<my-directive datas="myDatas"></my-directive>
