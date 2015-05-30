@@ -16,7 +16,7 @@ angular.module('modulo.home', ['ngRoute', 'modulo.db'])
     }])
     .controller('HomeCtrl', ['$scope', 'oDB', function ($scope, oDB) {
         console.log(oDB);
-        $scope.miNombre = 'Alvaro';
+        $scope.miNombreHome = 'Alvaro Isorna';
         $scope.mostrarLista = (oDB.coches > 0);
         $scope.coches = oDB.coches;
     }]);

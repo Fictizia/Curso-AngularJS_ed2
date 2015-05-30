@@ -39,6 +39,7 @@ __Application__
  * `ng-include`.
 * __Binding__
  * `ng-model`.
+ * `ng-bind`. 
  * [Template -> View <-> Model](https://docs.angularjs.org/guide/databinding).
  * Using a __fixture__ until having a database.
 * __Route__
