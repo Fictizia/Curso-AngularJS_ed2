@@ -1,7 +1,7 @@
 /* globals angular */
 'use strict';
 
-angular.module('myApp', ['ngRoute', 'modulo.home', 'modulo.chat', 'modulo.detail'])
+angular.module('myApp', ['ngRoute', 'modulo.home', 'modulo.chat', 'modulo.detail', 'modulo.filtros'])
     .constant('oURLs', {
         partials: {
             menu: 'partials/menu.html'
@@ -25,7 +25,9 @@ angular.module('myApp', ['ngRoute', 'modulo.home', 'modulo.chat', 'modulo.detail
             templateUrl: oURLs.templates.notFound
         });
     }])
-    .controller('AppCtrl', ['$rootScope', function ($rootScope) {
+    .controller('AppCtrl', ['$rootScope', '$scope', function ($rootScope, $scope) {
+        $scope.hoy = new Date();
+        
         $rootScope.$on("$routeChangeError", function (event, current, previous, rejection) {
             console.log(rejection);
           //if (err === "AUTH_REQUIRED") {

@@ -2,7 +2,7 @@
 
 <section>
     <p>Hola {{miNombre}}</p>
-    <ul>
+    <ul ng-show="mostrarLista">
         <li ng-repeat="coche in coches"><a ng-href="./detail/{{coche.matricula}}/{{coche.color}}">{{coche.matricula}}</a></li>
     </ul>
 </section>
