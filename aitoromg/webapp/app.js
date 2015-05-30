@@ -4,7 +4,8 @@
 angular.module('myApp', [
     'ngRoute', 
     'modulo.home', 
-    'modulo.chat'
+    'modulo.chat',
+    'modulo.chatdet'
     ])
     .constant('oURLs', {
         partials: {
