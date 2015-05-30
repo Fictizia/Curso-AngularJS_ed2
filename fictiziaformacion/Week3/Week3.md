@@ -32,6 +32,7 @@ Week 3 Milestone
 
 * [Creating custom directives](https://docs.angularjs.org/guide/directive).
 * Use of the __`scope`__ option (not `$scope`).
+* [Angular.element](https://docs.angularjs.org/api/ng/function/angular.element).
 
 ## Dependencies and Injection
 

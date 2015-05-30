@@ -1,0 +1,53 @@
+@import url("reset.css");
+
+html, body {
+    font-family: Arial;
+    font-size: 16px;
+    color: #333;
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+a, a:link, a:active, a:visited, a:hover {
+    color: #3366FF;
+    text-decoration: none;
+}
+
+quote {
+    display: block;
+    font-style: oblique;
+    font-size: .8rem;
+    color: #999;
+    padding-left: 7px;
+    margin-top: 20px;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+header {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    padding: 20px;
+}
+
+nav ul li {
+    float: left;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+

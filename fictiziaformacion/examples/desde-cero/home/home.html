@@ -1,8 +1,9 @@
 <h1>Home</h1>
 
 <section>
-    <p>Hola {{miNombre}}</p>
-    <ul>
+    <p>Hola {{miNombreHome}}</p>
+    <mi-directiva datos="pepito"></mi-directiva>
+    <ul ng-show="mostrarLista">
         <li ng-repeat="coche in coches"><a ng-href="./detail/{{coche.matricula}}/{{coche.color}}">{{coche.matricula}}</a></li>
     </ul>
 </section>

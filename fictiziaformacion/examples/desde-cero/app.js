@@ -1,7 +1,7 @@
 /* globals angular */
 'use strict';
 
-angular.module('myApp', ['ngRoute', 'modulo.home', 'modulo.chat', 'modulo.detail'])
+angular.module('myApp', ['ngRoute', 'modulo.home', 'modulo.chat', 'modulo.detail', 'modulo.filtros', 'modulo.miDirectiva'])
     .constant('oURLs', {
         partials: {
             menu: 'partials/menu.html'
@@ -25,7 +25,16 @@ angular.module('myApp', ['ngRoute', 'modulo.home', 'modulo.chat', 'modulo.detail
             templateUrl: oURLs.templates.notFound
         });
     }])
-    .controller('AppCtrl', ['$rootScope', function ($rootScope) {
+    .controller('AppCtrl', ['$rootScope', '$scope', 'daysAgoFilter', function ($rootScope, $scope, daysAgoFilter) {
+        console.log(daysAgoFilter);
+        $scope.hoy = new Date();
+        
+        $scope.miNombre = 'Alvaro';
+        $scope.pepito = {
+            nombre: 'Alvaro',
+            apellido: 'Isorna'
+        };
+        
         $rootScope.$on("$routeChangeError", function (event, current, previous, rejection) {
             console.log(rejection);
           //if (err === "AUTH_REQUIRED") {
