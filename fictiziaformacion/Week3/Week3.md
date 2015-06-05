@@ -54,6 +54,7 @@ Take a look at `modules.js` for code explanation.
 * Use of __`$error`__, __`$dirty`__ & __`$invalid`__.
 * Use of `ng-model-options="{ updateOn: 'default blur', debounce: { default: 500, blur: 0 } }"`.
 * Custom validation.
+* [Angular.copy vs Angular.extend](http://www.tothenew.com/blog/angularjs-copy-vs-extend/).
 
 ## Practice
 
