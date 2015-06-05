@@ -6,7 +6,10 @@ angular
     'myApp.home',
     'myApp.aboutUs',
     'myApp.contact',
+    'myApp.details',
+    'myApp.detail',
     'myApp.db',
+    'myApp.directives',
     'ngRoute'
   ])
 
@@ -18,13 +21,15 @@ angular
       about_us : 'about-us/about-us.html',
       contact  : 'contact/contact.html',
       details  : 'details/details.html',
+      detail   : 'detail/detail.html',
       notFoud  : '404/404.html'
     },
     paths : {
       home     : './',
       about_us : './about-us',
       contact  : './contact',
-      details  : './details'
+      details  : './details',
+      detail   : './detail',
     }
   })
 

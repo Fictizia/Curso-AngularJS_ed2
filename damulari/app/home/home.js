@@ -3,7 +3,9 @@
 
 angular
   .module('myApp.home', [
-    'ngRoute'
+    'ngRoute',
+    'myApp.db',
+    'myApp.filter'
   ])
   .constant('appURLS', {
     templates : {
@@ -19,6 +21,13 @@ angular
       })
   }])
 
-  .controller('HomeCtrl',['$scope', 'appURLS', function($scope, appURLS){
+  .controller('HomeCtrl',['$scope', 'appURLS', 'appDB', 'dayLocaleFilter', function($scope, appURLS, appDB, dayLocaleFilter){
     $scope.myName = 'David';
+    $scope.cars = appDB.cars
+    $scope.date = new Date() | dayLocaleFilter ;
+    $scope.myDatas = {
+      name     : 'David',
+      lastname : 'Mulero',
+      age      : '26'
+    }
   }])

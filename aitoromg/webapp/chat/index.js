@@ -1,7 +1,7 @@
 /* globals angular */
 'use strict';
 
-angular.module('modulo.chat', ['ngRoute', 'modulo.db'])
+angular.module('modulo.chat', ['ngRoute', 'modulo.db', 'modulo.filter', 'modulo.directive'])
     .constant('oURLs', {
         templates: {
             chat: 'chat/'
@@ -16,7 +16,7 @@ angular.module('modulo.chat', ['ngRoute', 'modulo.db'])
         })
         
     }])
-    .controller('ChatCtrl', ['$scope', 'oUsers', function($scope, oUsers) {
+    .controller('ChatCtrl', ['$scope', 'oUsers', 'imparFilter', function($scope, oUsers, imparFilter) {
         $scope.name = 'Aitor';
-        $scope.users = oUsers.users;
+        $scope.users = oUsers.users;// | imparFilter;
     }]);
