@@ -46,12 +46,16 @@ Week 4 Milestone
 
 ## Firebase
 
+* Firebase commands: `npm install -g firebase-tools`, `firebase init`, `sudo firebase bootstrap`, `firebase deploy`.
 * [Custom Rewrites & Redirection](https://www.firebase.com/docs/hosting/guide/url-redirects-rewrites.html).
 * [Full Firebase Configuration](https://www.firebase.com/docs/hosting/guide/full-config.html).
 * [Security & Rules](https://www.firebase.com/docs/security/quickstart.html).
 * [User Based Security](https://www.firebase.com/docs/security/guide/user-security.html).
 * [Saving Data](https://www.firebase.com/docs/web/guide/saving-data.html).
 * [Retrieving Data](https://www.firebase.com/docs/web/guide/retrieving-data.html).
+* [Loggin users with GitHub](https://www.firebase.com/docs/web/guide/login/github.html).
+* [Review `firebase.json` configuration](https://www.firebase.com/docs/hosting/guide/full-config.html).
+* [Create, Update and delete from our firebase db](http://thejackalofjavascript.com/getting-started-with-firebase/).
 
 ## Practice
 
