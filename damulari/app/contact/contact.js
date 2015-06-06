@@ -21,4 +21,16 @@ angular
 
   .controller('ContactCtrl',['$scope', 'appURLS', function($scope, appURLS){
     $scope.myName = 'David';
+
+    $scope.master = {};
+    
+    $scope.update = function(user) {
+        $scope.master = angular.copy(user);
+      };
+
+      $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+      };
+
+      $scope.reset();
   }])

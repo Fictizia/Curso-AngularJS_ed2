@@ -1,5 +1,7 @@
 angular
-    .module('myApp.db', [])
+    .module('myApp.db', [
+    'firebase'
+    ])
     .constant('appDB', {
         cars : [
             {
@@ -15,4 +17,20 @@ angular
                 model : 'fiat bravo'
             }
         ]
-  })
+    })
+    .controller('DBCtrl', [ 
+        '$scope', '$firebaseArray', function($scope, $firebaseArray){
+            var ref = new Firebase("https://damulari-app.firebaseio.com/");  
+            
+            
+            $scope.datas = $firebaseArray(ref);
+        }
+    ])
+    .controller('DataCtrl', ['$scope', function($scope){
+        $scope.user = {};
+
+        $scope.addData = function(user) {
+            console.log(user);
+            $scope.datas.$add(user)
+         }
+    }])
