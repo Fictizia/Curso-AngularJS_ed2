@@ -4,7 +4,11 @@ angular.module('kplAngularCero', [
                                     'modulo.home',
                                     'modulo.chat',
                                     'modulo.productos',
-                                    'modulo.producto'
+                                    'modulo.producto',
+                                    'modulo.filtros',
+                                    'modulo.directivas',
+                                    'modulo.db',
+                                    'modulo.formularios'
                                 ])
     // .constant('oURLs', {/*
     //     partials: {
