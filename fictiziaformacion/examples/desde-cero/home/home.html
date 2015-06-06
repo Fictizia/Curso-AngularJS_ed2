@@ -6,4 +6,15 @@
     <ul ng-show="mostrarLista">
         <li ng-repeat="coche in coches"><a ng-href="./detail/{{coche.matricula}}/{{coche.color}}">{{coche.matricula}}</a></li>
     </ul>
+    
+    <div ng-controller="DBController">
+        <form ng-controller="alumnosCtrl" ng-submit="newAlumn(alumno)">
+            <input type="text" ng-model="alumno.nombre" placeholder="nombre" />
+            <input type="text" ng-model="alumno.apellido" placeholder="apellido" />
+            <input type="submit" value="Submit" />
+        </form>
+        <ul>
+            <li ng-repeat="esteAlumno in alumnos">{{esteAlumno.nombre}} {{esteAlumno.apellido}}</li>
+        </ul>
+    </div>
 </section>

@@ -1,7 +1,14 @@
 /* globals angular */
 'use strict';
 
-angular.module('myApp', ['ngRoute', 'modulo.home', 'modulo.chat', 'modulo.detail', 'modulo.filtros', 'modulo.miDirectiva'])
+angular.module('myApp', [
+    'ngRoute', 
+    'modulo.home', 
+    'modulo.form', 
+    'modulo.chat', 
+    'modulo.detail', 
+    'modulo.filtros', 
+    'modulo.miDirectiva'])
     .constant('oURLs', {
         partials: {
             menu: 'partials/menu.html'

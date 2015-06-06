@@ -1,0 +1,9 @@
+{
+  "firebase": "angular-mayo",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

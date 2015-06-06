@@ -1,0 +1,27 @@
+<h1>Form</h1>
+
+<section>
+    <p>Estás en el form.</p>
+    
+    <form novalidate name="miFormulario">
+        <input type="text" ng-model="usuario.nombre" required placeholder="Tu nombre" title="Tu nombre" name="nombre" />
+        <input type="number" ng-model="usuario.edad" min="18" max="99" required placeholder="18+" title="Tu edad" name="edad" />
+        <input type="email" ng-model="usuario.email" placeholder="tu@email.com" title="Tu email" name="email" />
+        <input type="submit" />
+        
+        <div ng-show="miFormulario.$submitted">
+            <p>Formulario enviado</p>
+            <p ng-show="miFormulario.nombre.$error.required">Tienes que rellenar tu nombre.</p>
+            <p ng-show="miFormulario.edad.$error.required">Tienes que rellenar tu edad.</p>
+            <p ng-show="miFormulario.edad.$error.number">Tu edad tiene que ser un número.</p>
+            <p ng-show="miFormulario.edad.$error.min">Tu edad tiene que estar comprendida entre 18 y 99.</p>
+            <p ng-show="miFormulario.edad.$error.max">Tu edad tiene que estar comprendida entre 18 y 99.</p>
+            <p ng-show="miFormulario.email.$error.required">Tienes que rellenar tu email.</p>
+            <p ng-show="miFormulario.email.$error.email">Tu email tiene que tener el formato correcto (tu@email.com).</p>
+        </div>
+    </form>
+    
+    
+    
+    <p ng-show="usuario">Hola {{usuario.nombre}}, tienes {{usuario.edad}} y tu email es {{usuario.email}}.</p>
+</section>

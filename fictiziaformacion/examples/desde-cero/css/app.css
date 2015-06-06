@@ -68,3 +68,13 @@ fieldset {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
 }
+
+form .ng-touched.ng-invalid,
+form.ng-submitted .ng-invalid {
+    border: 1px solid red;
+    background-color: #ffc;
+}
+
+form input[type="number"] {
+    min-width: 50px;
+}

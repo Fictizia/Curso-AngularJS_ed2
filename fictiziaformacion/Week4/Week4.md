@@ -36,6 +36,7 @@ Week 4 Milestone
 * Take a look at `factory-pattern.js` for code explanation.
 * The __Factory Recipe__ in AngularJS.
 * [Differences between Factory, Service and Provider](http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/).
+* [JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/).
 
 ## Special Purpose Objects
 
