@@ -1,0 +1,15 @@
+.css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+
+.css-form input.ng-valid.ng-touched {
+background-color: #78FA89;
+}
+  
+.css-form input.ng-valid-number.ng-touched.ng-dirty {
+background-color: orange !important;
+}
+
+.css-form input.ng-untouched {
+background-color: yellow;
+}
