@@ -19,4 +19,5 @@ angular.module('modulo.chat', ['ngRoute', 'modulo.db', 'modulo.filter', 'modulo.
     .controller('ChatCtrl', ['$scope', 'oUsers', 'imparFilter', function($scope, oUsers, imparFilter) {
         $scope.name = 'Aitor';
         $scope.users = oUsers.users;// | imparFilter;
+        $scope.user = {}; 
     }]);

@@ -4,4 +4,22 @@
     <ul>
         <li ng-repeat="user in users"><a ng-href="./chatdet/{{user.id}}">ID: {{user.id}}</a></li>
     </ul>
+    <p><b>Formulario de <b>{{user.name}}</b> <b>{{user.surname}}</b></b></p>
+    <div ng-controller="DBCont">
+        <form ng-controller="UserCont" name="form" novalidate class="css-form" ng-submit="newUser(user)">
+            Nombre: <input type="text" ng-model="user.name" required /><br /><br />
+            Apellido: <input type="text" ng-model="user.surname" required /><br /><br />
+            E-mail: <input type="email" ng-model="user.email" name="email" required /><br />
+            <div ng-show="form.$submitted || form.email.$touched">
+              <span ng-show="form.email.$error.required">Introduce tu email.</span>
+              <span ng-show="form.email.$error.email">Email invalido.</span>
+            </div><br />
+            Password: <input type="password" ng-model="user.password" required /><br /><br />
+            Edad: <input type="number" ng-model="user.number" /><br /><br />
+            <input type="submit" value="Submit" /><br /><br />
+        </form>
+        <ul>
+            <li ng-repeat="user in users">{{user.name}} {{user.surname}}</a></li>
+        </ul>
+    </div>
 </header>
