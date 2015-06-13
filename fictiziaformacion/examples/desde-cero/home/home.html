@@ -8,7 +8,7 @@
     </ul>
     
     <div ng-controller="AlumnosDataController">
-        <form ng-controller="AlumnosFormCtrl" ng-submit="newAlumn(alumno)">
+        <form ng-submit="newAlumn(alumno)">
             <input type="text" ng-model="alumno.nombre" placeholder="nombre" />
             <input type="text" ng-model="alumno.apellido" placeholder="apellido" />
             <input type="submit" value="Submit" />
