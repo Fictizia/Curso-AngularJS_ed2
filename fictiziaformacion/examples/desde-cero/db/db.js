@@ -27,9 +27,29 @@ angular.module('modulo.db', ['firebase'])
         };
     }])
     .factory('DBService', ['$firebaseArray', function ($firebaseArray) {
-        var oFB_DB = new Firebase('https://angular-mayo.firebaseio.com/alumnos');
+        var oFB_DB = new Firebase('https://angular-mayo.firebaseio.com/alumnos'),
+            oUsuario = {};
         
         return {
+            register: function () {
+                var oFB_Users = new Firebase('https://angular-mayo.firebaseio.com/users');
+                
+                oFB_Users.child(oUsuario.github.username).set(oUsuario);
+            },
+            login: function (pfCallback) {
+                oFB_DB.authWithOAuthPopup("github", function(error, authData) {
+                    if (error) {
+                        console.log("Login Failed!", error);
+                    } else {
+                        console.log("Authenticated successfully with payload:", authData);
+                        oUsuario = authData;
+                        pfCallback(authData);
+                    }
+                });
+            },
+            logout: function () {
+                oFB_DB.unauth();
+            },
             orderBySurname: function () {
                 var oFB_Array = $firebaseArray(oFB_DB.orderByChild('apellido'));
                 

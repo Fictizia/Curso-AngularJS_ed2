@@ -2,12 +2,17 @@
 
 <section>
     <p>Hola {{miNombreHome}}</p>
+    
+    
     <mi-directiva datos="pepito"></mi-directiva>
     <ul ng-show="mostrarLista">
         <li ng-repeat="coche in coches"><a ng-href="./detail/{{coche.matricula}}/{{coche.color}}">{{coche.matricula}}</a></li>
     </ul>
     
     <div ng-controller="AlumnosDataController">
+        <input type="button" ng-click="login()" ng-show="!usuario" value="hacer login" />
+        <input type="button" ng-click="register()" ng-show="usuario" value="registrarse" />
+        <input type="button" ng-click="logout()" ng-show="usuario" value="hacer logout" />
         <form ng-submit="newAlumn(alumno)">
             <input type="text" ng-model="alumno.nombre" placeholder="nombre" />
             <input type="text" ng-model="alumno.apellido" placeholder="apellido" />

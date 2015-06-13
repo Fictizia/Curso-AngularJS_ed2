@@ -37,6 +37,23 @@ angular.module('modulo.home', ['ngRoute', 'modulo.db'])
         $scope.ordernarPorApellido = function () {
             $scope.alumnos = DBService.orderBySurname();
         };
+        
+        $scope.login = function () {
+            DBService.login(onAuthCallback);
+            
+            function onAuthCallback (poUsuario) {
+                $scope.$apply(function () {
+                    $scope.usuario = poUsuario;
+                });
+            };
+        };
+        $scope.logout = function () {
+            DBService.logout();
+            $scope.usuario = null;
+        };
+        $scope.register = function () {
+            DBService.register();
+        };
     }])
     .controller('HomeCtrl', ['$scope', 'oDB', 'servicioDeAlertas', function ($scope, oDB, servicioDeAlertas) {
         console.log(oDB);
