@@ -30,8 +30,18 @@ angular.module('modulo.db', ['firebase'])
         var oFB_DB = new Firebase('https://angular-mayo.firebaseio.com/alumnos');
         
         return {
+            orderBySurname: function () {
+                var oFB_Array = $firebaseArray(oFB_DB.orderByChild('apellido'));
+                
+                return oFB_Array;
+            },
+            getPagedQuery: function (piRows){
+                var oFB_Array = $firebaseArray(oFB_DB.limitToFirst(piRows));
+                
+                return oFB_Array;
+            },
             getAlumnos: function () {
-                var oFB_Array = $firebaseArray(oFB_DB)
+                var oFB_Array = $firebaseArray(oFB_DB);
                 
                 
                 oFB_Array.$loaded().then(function(poDB) {

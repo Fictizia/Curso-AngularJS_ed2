@@ -29,6 +29,14 @@ angular.module('modulo.home', ['ngRoute', 'modulo.db'])
                 ref.key() === alumno.$id; // true
             });
         };
+        
+        $scope.tresAlumnos = function () {
+            $scope.alumnos = DBService.getPagedQuery(3);
+        };
+        
+        $scope.ordernarPorApellido = function () {
+            $scope.alumnos = DBService.orderBySurname();
+        };
     }])
     .controller('HomeCtrl', ['$scope', 'oDB', 'servicioDeAlertas', function ($scope, oDB, servicioDeAlertas) {
         console.log(oDB);
