@@ -36,6 +36,7 @@ Week 5 Milestone
 
 * [Foundation and AngularJS](http://zurb.com/article/1345/design-amazing-single-page-apps-with-the-). [Foundation framework](http://foundation.zurb.com/).
 * [Angular UI](http://angular-ui.github.io/).
+* [Ionic Framework](http://ionicframework.com/).
 
 ## Practice
 
