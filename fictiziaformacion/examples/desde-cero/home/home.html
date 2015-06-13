@@ -20,7 +20,7 @@
         </form>
         <input type="button" ng-click="tresAlumnos()" value="mostrar tres alumnos" />
         <input type="button" ng-click="ordernarPorApellido()" value="ordenar por apellido" />
-        <ul>
+        <ul class="lista-alumnos">
             <li ng-repeat="esteAlumno in alumnos">{{esteAlumno.nombre}} {{esteAlumno.apellido}} <a href="#" ng-click="borrarAlumno(esteAlumno)">borrar</a></li>
         </ul>
     </div>
