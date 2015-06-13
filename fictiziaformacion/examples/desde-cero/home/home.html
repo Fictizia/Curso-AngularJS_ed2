@@ -7,7 +7,7 @@
         <li ng-repeat="coche in coches"><a ng-href="./detail/{{coche.matricula}}/{{coche.color}}">{{coche.matricula}}</a></li>
     </ul>
     
-    <div ng-controller="DBController">
+    <div ng-controller="AlumnosDataController">
         <form ng-controller="alumnosCtrl" ng-submit="newAlumn(alumno)">
             <input type="text" ng-model="alumno.nombre" placeholder="nombre" />
             <input type="text" ng-model="alumno.apellido" placeholder="apellido" />
@@ -17,4 +17,8 @@
             <li ng-repeat="esteAlumno in alumnos">{{esteAlumno.nombre}} {{esteAlumno.apellido}}</li>
         </ul>
     </div>
+    
+    <input type="text" ng-model="nuevoMensaje" placeholder="Nuevo Mensaje" />
+    <input type="button" ng-click="guardarMensaje(nuevoMensaje)" value="guardar mensaje" />
+    <input type="button" ng-click="mostrarMensajes()" value="mostrar mensajes" />
 </section>

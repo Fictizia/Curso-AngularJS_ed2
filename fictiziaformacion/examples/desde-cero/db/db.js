@@ -14,10 +14,26 @@ angular.module('modulo.db', ['firebase'])
             }
         ]
     })
-    .controller('DBController', ['$scope', '$firebaseArray', function ($scope, $firebaseArray) {
+    .factory('servicioDeAlertas', ['$window', function (poWindow) {
+        var aMensajes = [];
+        
+        return {
+            alerta: function () {
+                poWindow.alert(aMensajes.join('\n'));
+            },
+            nuevoMensaje: function (pcMensaje) {
+                aMensajes.push(pcMensaje);
+            }
+        };
+    }])
+    .factory('DBService', ['$firebaseArray', function ($firebaseArray) {
         var oFB_DB = new Firebase('https://angular-mayo.firebaseio.com/alumnos');
         
-        $scope.alumnos = $firebaseArray(oFB_DB);
+        return {
+            getAlumnos: function () {
+                return $firebaseArray(oFB_DB);
+            }
+        };
     }])
     .controller('alumnosCtrl', ['$scope', function ($scope) {
         $scope.alumno = {};

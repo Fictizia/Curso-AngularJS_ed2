@@ -1,7 +1,7 @@
 /* globals angular */
 'use strict';
 
-angular.module('modulo.form', ['ngRoute'])
+angular.module('modulo.form', ['ngRoute', 'modulo.db'])
     .constant('oURLs', {
         templates: {
             form: 'form/form.html',
@@ -14,6 +14,12 @@ angular.module('modulo.form', ['ngRoute'])
             controller: 'FormCtrl'
         })
     }])
-    .controller('FormCtrl', ['$scope', function ($scope) {
-        
+    .controller('FormCtrl', ['$scope', 'servicioDeAlertas', function ($scope, servicioDeAlertas) {
+        $scope.nuevoMensaje = '';
+        $scope.guardarMensaje = function (pcMensaje) {
+            servicioDeAlertas.nuevoMensaje(pcMensaje);
+        };
+        $scope.mostrarMensajes = function () {
+            servicioDeAlertas.alerta();
+        };
     }]);
