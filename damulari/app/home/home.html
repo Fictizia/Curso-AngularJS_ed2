@@ -9,4 +9,15 @@
         </li>
     </ul>
 </div>
+
+<div ng-controller="DBCtrl">
+    <form ng-controller="DataCtrl"  ng-submit="addData(user)">
+        <input type="text" name="user.name" ng-model="user.name" placeholder="nombre" />
+            <input type="text" name="user.lastname" ng-model="user.lastname" placeholder="apellido" />
+        <input type="submit" value="Submit"/>
+    </form>
+    <ul>
+        <li ng-repeat="user in datas">{{ user.name}} {{ user.lastname }}</li>
+    </ul>
+</div>
 <my-directive datas="myDatas"></my-directive>

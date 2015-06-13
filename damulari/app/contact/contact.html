@@ -1,3 +1,47 @@
+<style type="text/css">
+    .css-form input,
+    .css-form textarea{
+        box-shadow:none;
+        -webkit-transition: all ease-in-out .2s;
+        transition:all ease-in-out .2s;
+    }
+    .css-form input.ng-invalid.ng-touched {
+        border-color: #FA787E;
+        background-color: #DD5D63;
+        color: #fafafa;
+    }
+
+  .css-form input.ng-valid.ng-touched {
+    border-color: #78FA89;
+  }
+</style>
 <div ng-controller="ContactCtrl">
     <h1>Contact</h1>
+    <form name="form_contact" novalidate class="css-form">
+        <div>
+            <label for="form_contact_name">Name</label>
+            <input id="form_contact_name" type="text" name="form_contact_name" ng-model="user.name" placeholder="Name" required/>
+            <div ng-show="form_contact.$submitted || form_contact.form_contact_name.$touched">
+                <div ng-show="form_contact.form_contact_name.$error.required">Name not correct.</div>
+            </div>
+        </div>
+        <div>
+            <label for="form_contact_email">Email</label>
+            <input id="form_contact_email" type="email" name="form_contact_email" ng-model="user.email" placeholder="@" required/>
+            <div ng-show="form_contact.$submitted || form_contact.form_contact_email.$touched">
+                <div ng-show="form_contact.form_contact_email.$error.required">Email not correct.</div>
+            </div>
+        </div>
+        <div>
+            <label for="form_contact_msg">Message</label>
+            <textarea id="form_contact_msg" type="textarea" name="form_contact_msg" ng-model="uer.msg" placeholder="Message" required/></textarea>
+            <div ng-show="form_contact.$submitted || form_contact.form_contact_msg.$touched">
+                <div ng-show="form_contact.form_contact_msg.$error.required">Message not correct.</div>
+            </div>
+        </div>
+        <div>
+            <input type="button" ng-click="reset()" value="Reset" />
+            <input type="submit" ng-click="update(user)" value="Send" />
+        </div>
+    </form>
 </div>

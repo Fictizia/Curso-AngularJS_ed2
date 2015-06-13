@@ -45,6 +45,14 @@ nav ul li {
     margin-right: 5px;
 }
 
+input.ng-touched {background-color: yellow;}
+input.ng-submitted.ng-invalid {background-color: red;}
+input.ng-touched.ng-dirty {background-color: orange;}
+
+.error {
+    color: red;
+}
+
 
 
 
