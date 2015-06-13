@@ -16,6 +16,20 @@ angular.module('modulo.home', ['ngRoute', 'modulo.db'])
     }])
     .controller('AlumnosDataController', ['$scope', 'DBService', function ($scope, DBService) {
         $scope.alumnos = DBService.getAlumnos();
+        $scope.borrarAlumno = function (alumno) {
+            $scope.alumnos.$remove(alumno).then(function(ref) {
+                console.log('se ha borrado el alumno', alumno.$id);
+                ref.key() === alumno.$id; // true
+            });
+        };
+    }])
+    .controller('AlumnosFormCtrl', ['$scope', function ($scope) {
+        $scope.alumno = {};
+        
+        $scope.newAlumn = function (alumno) {
+            console.log(alumno);
+            $scope.alumnos.$add(alumno);
+        };
     }])
     .controller('HomeCtrl', ['$scope', 'oDB', 'servicioDeAlertas', function ($scope, oDB, servicioDeAlertas) {
         console.log(oDB);

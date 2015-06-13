@@ -14,15 +14,15 @@ angular.module('modulo.db', ['firebase'])
             }
         ]
     })
-    .factory('servicioDeAlertas', ['$window', function (poWindow) {
+    .factory('servicioDeAlertas', ['$window', function ($window) {
         var aMensajes = [];
         
         return {
             alerta: function () {
-                poWindow.alert(aMensajes.join('\n'));
+                $window.alert(aMensajes.join('\n'));
             },
             nuevoMensaje: function (pcMensaje) {
-                aMensajes.push(pcMensaje);
+                $window.push(pcMensaje);
             }
         };
     }])
@@ -31,15 +31,18 @@ angular.module('modulo.db', ['firebase'])
         
         return {
             getAlumnos: function () {
-                return $firebaseArray(oFB_DB);
+                var oFB_Array = $firebaseArray(oFB_DB)
+                
+                
+                oFB_Array.$loaded().then(function(poDB) {
+                    console.log('DB cargada', poDB);
+                    poDB === oFB_Array; // true
+                })
+                .catch(function(error) {
+                    console.log("Error:", error);
+                });
+                
+                return oFB_Array;
             }
-        };
-    }])
-    .controller('alumnosCtrl', ['$scope', function ($scope) {
-        $scope.alumno = {};
-        
-        $scope.newAlumn = function (alumno) {
-            console.log(alumno);
-            $scope.alumnos.$add(alumno);
         };
     }]);
