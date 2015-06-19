@@ -100,6 +100,7 @@ Jasmine comes with a number of matchers that help you make a variety of assertio
  * [Where does the Ionic Framework fit in?](http://ionicframework.com/blog/where-does-the-ionic-framework-fit-in/).
  * [Cookie-based Authentication in AngularJS](http://ionicframework.com/blog/angularjs-authentication/).
  * [Publishing your Ionic application](http://ionicframework.com/docs/guide/publishing.html).
+ * [Using Ionic with Firebase](https://www.firebase.com/docs/web/libraries/ionic/guide.html).
  * [ngCordova](http://ngcordova.com/).
 * [GitHub JSPro user for example apps](https://github.com/jsprodotcom).
 
