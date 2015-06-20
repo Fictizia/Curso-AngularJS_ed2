@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+    <!-- <base href="/"> -->
+    <base href="/damulari/app/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css" -->
+    <link rel="stylesheet" href="./testing/lib/jasmine-2.3.4/jasmine.css" type="text/css" />
+    
+    <!-- include Jasmine files -->
+    <script src="./testing/lib/jasmine-2.3.4/jasmine.js"></script>
+    <script src="./testing/lib/jasmine-2.3.4/jasmine-html.js"></script>
+    <script src="./testing/lib/jasmine-2.3.4/boot.js"></script>
+    
+    <!-- include source files -->
+    <script src="./testing/src/Player.js"></script>
+    <script src="./testing/src/Song.js"></script>
+
+    <!-- include spec files -->
+    <script src="./testing/spec/SpecHelper.js"></script>
+    <script src="./testing/spec/PlayerSpec.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Pagina Testeo con Qunit</h1>
+    </header>
+    <form>
+        <input type="text" id="name"/>
+        <input type="text" id="age"/>
+        <input type="submit" value="Submit" id="btnSubmit"/>
+    </form>
+
+    <!-- script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script -->
+    <!-- script src="./testing/js/test.js"></script -->
+    
+    
+    <!-- script src="./testing/js/jasmine.test.js"></script -->
+</body>
+</html>

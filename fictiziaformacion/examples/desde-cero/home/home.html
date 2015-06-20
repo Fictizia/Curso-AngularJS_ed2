@@ -2,19 +2,30 @@
 
 <section>
     <p>Hola {{miNombreHome}}</p>
+    
+    
     <mi-directiva datos="pepito"></mi-directiva>
     <ul ng-show="mostrarLista">
         <li ng-repeat="coche in coches"><a ng-href="./detail/{{coche.matricula}}/{{coche.color}}">{{coche.matricula}}</a></li>
     </ul>
     
-    <div ng-controller="DBController">
-        <form ng-controller="alumnosCtrl" ng-submit="newAlumn(alumno)">
+    <div ng-controller="AlumnosDataController">
+        <input type="button" ng-click="login()" ng-show="!usuario" value="hacer login" />
+        <input type="button" ng-click="register()" ng-show="usuario" value="registrarse" />
+        <input type="button" ng-click="logout()" ng-show="usuario" value="hacer logout" />
+        <form ng-submit="newAlumn(alumno)">
             <input type="text" ng-model="alumno.nombre" placeholder="nombre" />
             <input type="text" ng-model="alumno.apellido" placeholder="apellido" />
             <input type="submit" value="Submit" />
         </form>
-        <ul>
-            <li ng-repeat="esteAlumno in alumnos">{{esteAlumno.nombre}} {{esteAlumno.apellido}}</li>
+        <input type="button" ng-click="tresAlumnos()" value="mostrar tres alumnos" />
+        <input type="button" ng-click="ordernarPorApellido()" value="ordenar por apellido" />
+        <ul class="lista-alumnos">
+            <li ng-repeat="esteAlumno in alumnos">{{esteAlumno.nombre}} {{esteAlumno.apellido}} <a href="#" ng-click="borrarAlumno(esteAlumno)">borrar</a></li>
         </ul>
     </div>
+    
+    <input type="text" ng-model="nuevoMensaje" placeholder="Nuevo Mensaje" />
+    <input type="button" ng-click="guardarMensaje(nuevoMensaje)" value="guardar mensaje" />
+    <input type="button" ng-click="mostrarMensajes()" value="mostrar mensajes" />
 </section>

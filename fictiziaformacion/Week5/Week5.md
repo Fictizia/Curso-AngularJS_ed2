@@ -22,6 +22,7 @@ Week 5 Milestone
 * Use [$animation](https://docs.angularjs.org/api/ng/type/angular.Module) for custom directives.
 * Take a look at `animations.js` for code explanation.
 * [ngAnimate reference web with examples](http://www.nganimate.org/).
+* [animate.css library](https://daneden.github.io/animate.css/).
 
 ## AngularJS and Material Design
 
@@ -35,6 +36,7 @@ Week 5 Milestone
 
 * [Foundation and AngularJS](http://zurb.com/article/1345/design-amazing-single-page-apps-with-the-). [Foundation framework](http://foundation.zurb.com/).
 * [Angular UI](http://angular-ui.github.io/).
+* [Ionic Framework](http://ionicframework.com/).
 
 ## Practice
 

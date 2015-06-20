@@ -3,6 +3,7 @@
 
 angular.module('myApp', [
     'ngRoute', 
+    'ngAnimate', 
     'modulo.home', 
     'modulo.form', 
     'modulo.chat', 

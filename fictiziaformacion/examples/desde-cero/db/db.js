@@ -14,16 +14,65 @@ angular.module('modulo.db', ['firebase'])
             }
         ]
     })
-    .controller('DBController', ['$scope', '$firebaseArray', function ($scope, $firebaseArray) {
-        var oFB_DB = new Firebase('https://angular-mayo.firebaseio.com/alumnos');
+    .factory('servicioDeAlertas', ['$window', function ($window) {
+        var aMensajes = [];
         
-        $scope.alumnos = $firebaseArray(oFB_DB);
+        return {
+            alerta: function () {
+                $window.alert(aMensajes.join('\n'));
+            },
+            nuevoMensaje: function (pcMensaje) {
+                $window.push(pcMensaje);
+            }
+        };
     }])
-    .controller('alumnosCtrl', ['$scope', function ($scope) {
-        $scope.alumno = {};
+    .factory('DBService', ['$firebaseArray', function ($firebaseArray) {
+        var oFB_DB = new Firebase('https://angular-mayo.firebaseio.com/alumnos'),
+            oUsuario = {};
         
-        $scope.newAlumn = function (alumno) {
-            console.log(alumno);
-            $scope.alumnos.$add(alumno);
+        return {
+            register: function () {
+                var oFB_Users = new Firebase('https://angular-mayo.firebaseio.com/users');
+                
+                oFB_Users.child(oUsuario.github.username).set(oUsuario);
+            },
+            login: function (pfCallback) {
+                oFB_DB.authWithOAuthPopup("github", function(error, authData) {
+                    if (error) {
+                        console.log("Login Failed!", error);
+                    } else {
+                        console.log("Authenticated successfully with payload:", authData);
+                        oUsuario = authData;
+                        pfCallback(authData);
+                    }
+                });
+            },
+            logout: function () {
+                oFB_DB.unauth();
+            },
+            orderBySurname: function () {
+                var oFB_Array = $firebaseArray(oFB_DB.orderByChild('apellido'));
+                
+                return oFB_Array;
+            },
+            getPagedQuery: function (piRows){
+                var oFB_Array = $firebaseArray(oFB_DB.limitToFirst(piRows));
+                
+                return oFB_Array;
+            },
+            getAlumnos: function () {
+                var oFB_Array = $firebaseArray(oFB_DB);
+                
+                
+                oFB_Array.$loaded().then(function(poDB) {
+                    console.log('DB cargada', poDB);
+                    poDB === oFB_Array; // true
+                })
+                .catch(function(error) {
+                    console.log("Error:", error);
+                });
+                
+                return oFB_Array;
+            }
         };
     }]);
