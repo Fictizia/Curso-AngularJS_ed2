@@ -11,13 +11,17 @@
 </div>
 
 <div ng-controller="DBCtrl">
-    <form ng-controller="DataCtrl"  ng-submit="addData(user)">
+    <form ng-submit="addData(user)">
         <input type="text" name="user.name" ng-model="user.name" placeholder="nombre" />
             <input type="text" name="user.lastname" ng-model="user.lastname" placeholder="apellido" />
         <input type="submit" value="Submit"/>
     </form>
+    <a href="javascript:void(0)" ng-click="pagedQuery(5)">ver 5 resultados</a>
     <ul>
-        <li ng-repeat="user in datas">{{ user.name}} {{ user.lastname }}</li>
+        <li ng-repeat="user in datas">{{ user.name}} {{ user.lastname }}
+            <a href="javascript:void(0)" ng-click="editData(user)">Editar</a>
+            <a href="javascript:void(0)" ng-click="dltData(user)">Borrar</a>
+        </li>
     </ul>
 </div>
 <my-directive datas="myDatas"></my-directive>

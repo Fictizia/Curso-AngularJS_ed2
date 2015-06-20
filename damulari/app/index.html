@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>My App</title>
-    <base href="/">
+    <!-- <base href="/"> -->
+    <base href="/damulari/app/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css">
 </head>
 <body ng-cloak>
     <header ng-controller="GeneralCtrl">
@@ -18,6 +20,8 @@
     
     <script src="//cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
     <script src="//cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+    
+    <script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script>
 
     <script type="text/javascript" src="db/db.js"></script>
     <script type="text/javascript" src="home/home.js"></script>
@@ -28,4 +32,5 @@
     <script type="text/javascript" src="directives/directives.js"></script>
     <script type="text/javascript" src="filters.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="factory.js"></script>
 </html>
