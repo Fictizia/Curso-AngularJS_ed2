@@ -56,7 +56,7 @@ If you name your file `karma.conf.js`, you can use `karma start`.
 $ karma start --no-browsers
 ```
 
-Now, open `http://<projectName>.<cloud9User>.c9.io/` in your browser.
+Now, open `http://<projectName>-<cloud9User>.c9.io/` in your browser.
 
 You can integrate [Karma with Grunt](https://github.com/karma-runner/grunt-karma) and [Gulp](https://github.com/karma-runner/gulp-karma) if want.
 
@@ -64,7 +64,7 @@ You can integrate [Karma with Grunt](https://github.com/karma-runner/grunt-karma
 
 ## Jasmine
 
-[Jasmine](http://jasmine.github.io/1.3/introduction.html) is a behavior driven development framework for JavaScript that has become the most popular choice for testing Angular applications. Jasmine provides functions to help with structuring your tests and also making assertions. As your tests grow, keeping them well structured and documented is vital, and Jasmine helps achieve this.
+[Jasmine](http://jasmine.github.io/2.0/introduction.html) is a behavior driven development framework for JavaScript that has become the most popular choice for testing Angular applications. Jasmine provides functions to help with structuring your tests and also making assertions. As your tests grow, keeping them well structured and documented is vital, and Jasmine helps achieve this.
 
 In Jasmine we use the describe function to group our tests together:
 

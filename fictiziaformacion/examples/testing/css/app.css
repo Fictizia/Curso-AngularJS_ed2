@@ -1,0 +1,103 @@
+/* app css stylesheet */
+
+body {
+  margin: 10px;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li.hide {
+   display: none;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+p.status {
+   color: red;
+}
+
+p.status.good, p.good {
+   color: green;
+}
+
+form label {
+   display: block;
+   margin: 15px 0;
+}
+
+form label span {
+   display: block;
+   font-weight: bold;
+}
+
+.error {
+   color: red;
+}
+
+fieldset {
+   float: left;
+   margin-right: 25px;
+   padding: 25px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+form .ng-touched.ng-invalid,
+form.ng-submitted .ng-invalid {
+    border: 1px solid red;
+    background-color: #ffc;
+}
+
+form input[type="number"] {
+    min-width: 50px;
+}
+
+.lista-alumnos {
+    border: 1px solid black;
+    list-style-type: none;
+    padding: 5px;
+    margin: 50px;
+}
+.lista-alumnos li {
+    border: 1px solid #ccc;
+    margin: 0 0 10px;
+    padding: 5px;
+    background-color: white;
+}
+.lista-alumnos li.ng-enter {
+    transition: all 1s ease;
+    opacity: 0;
+}
+.lista-alumnos li.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+.lista-alumnos li.ng-move {
+    background-color: #ffc;
+}
