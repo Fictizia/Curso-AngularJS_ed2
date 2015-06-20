@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Testeos con qUnit</title>
+        
+        <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css">
+    </head>
+    
+    <body>
+        <h2>Formulario de testeo:</h1>
+        <form>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+            <input type="text" id="edad" name="edad" placeholder="Tu edad" />
+            <input type="submit" id="botonSubmit" value="Submit"/>
+        </form>
+        
+        <br><br>
+        
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        
+        <!--script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script-->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.4/jasmine.min.js"></script>
+        <script src="tests.js"></script>
+    </body>
+</html>
